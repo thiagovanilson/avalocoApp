@@ -1,17 +1,67 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-content padding id="page2" style="background: rgb(229, 235, 235)">
+  <ion-list id="home-list1">
+    <ion-item-divider color="light" id="home-list-item-divider1" style="text-align: right" >
+      <ion-icon item-start>3</ion-icon>
+      <h1>Avaliaçõe Abertas</h1>
+    </ion-item-divider>
+    <ion-list id="home-list6">
+      <ion-item color="none" id="home-list-item9">
+          <div>Tecnologo TCE</div>
+          <div>01/01/2018 a 01/01/2018</div>
+          <div>Concluido 27%</div>
+      </ion-item>
+      <ion-item color="none" id="home-list-item10">
+        Item 2
+      </ion-item>
+      <ion-item color="none" id="home-list-item11">
+        Item 3
+      </ion-item>
+    </ion-list>
+  </ion-list>
+  <div class="spacer" style="height:70px;" id="home-spacer1"></div>
+  <ion-list id="home-list8">
+    <ion-item-divider color="light" id="home-list-item-divider3" style="text-align: right">
+      <ion-icon item-start>3</ion-icon>
+      <h1>Avaliaçõe Agendadas</h1>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+    </ion-item-divider>
+    <ion-list id="home-list7" >
+      <ion-item color="none" id="home-list-item12" on-click="warnUser()">
+        <div>Tecnologo TCE</div>
+        <div>01/01/2018 a 01/01/2018</div>
+        <div>Concluido 27%</div>
+      </ion-item>
+      <ion-item color="none" id="home-list-item13">
+        Item 2
+      </ion-item>
+      <ion-item color="none" id="home-list-item14">
+        Item 3
+      </ion-item>
+    </ion-list>
+  </ion-list>
+
+  <hr style="border-width: 2px; left: 0; width: 100% "  />
+
+  <!--Trying use with an anoter component, a external component. 
+
+    <div style="position: fixed; bottom: 0;   left:7px; width: 100% ; background-color: rgb(229, 235, 235)"    >      
+  
+      <button id="home-button2" ion-button color="stable" round style="width: 17%">
+        <ion-icon name="home"></ion-icon>
+      </button>
+      <button id="home-button3" ion-button color="stable" round style="width: 17%">
+        <ion-icon name="time"></ion-icon>
+      </button>
+      <button id="home-button4" ion-button color="stable" round style="width: 17%">
+        <ion-icon name="play"></ion-icon>
+      </button>
+      <button id="home-button5" ion-button color="stable" round style="width: 17%" on-click="warnUser()">
+        <ion-icon name="calendar"></ion-icon>
+      </button>
+      <button id="home-button6" ion-button color="stable" round style="width: 17%" on-click="goToHome()">
+        <ion-icon name="person"></ion-icon>
+      </button>
+    </div>
+  -->
+  <ion-menu></ion-menu>      
 </ion-content>

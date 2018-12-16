@@ -1,30 +1,40 @@
-import { Component } from '@angular/core';
+import { AvaliacaoDTO } from './../../model/avaliacao.dto';
+import { AvalicaoService } from './../../domain/avaliacao.service';
+import { Component       } from '@angular/core';
 import { NavController, IonicPage } from 'ionic-angular';
-import { LoginPage } from '../login/login';
-import { MenuPage } from '../menu/menu';
 
 import { AlertController } from 'ionic-angular';
+import { LoginPage       } from '../login/login';
 
 @IonicPage()
 @Component({
-  selector: 'page-home',
+  selector   : 'page-home',
   templateUrl: 'home.html',
  
 })
 
 export class HomePage {
   
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
-  }
   
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public avaliacaoService : AvalicaoService) {
+  }
   goToHome(params){
     
     this.navCtrl.push(LoginPage);
     //alert("This is my warning message " );
 
   }
+
+  avaliacoes : AvaliacaoDTO[];
+
   warnUser(params) {
-    this.navCtrl.push(MenuPage)
+    //this.navCtrl.push('MenuPage')
+    this.avaliacaoService.findOpened().subscribe(
+      response => {this.avaliacoes = response}, 
+      error    => {console.log(Response)}
+      );
+      /*
+    */
     const alert = this.alertCtrl.create({
       title: 'Titulo',
       subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',

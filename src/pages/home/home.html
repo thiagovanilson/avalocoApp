@@ -1,41 +1,30 @@
 <ion-content padding id="page2" style="background: rgb(229, 235, 235)">
   <ion-list id="home-list1">
     <ion-item-divider color="light" id="home-list-item-divider1" style="text-align: right" >
-      <ion-icon item-start>3</ion-icon>
-      <h1>Avaliaçõe Abertas</h1>
+      <ion-icon item-start>{{qtdAvOpned}}</ion-icon>
+      <h1>Avaliações Abertas</h1>
     </ion-item-divider>
     <ion-list id="home-list6">
-      <ion-item color="none" id="home-list-item9">
-          <div>Tecnologo TCE</div>
-          <div>01/01/2018 a 01/01/2018</div>
-          <div>Concluido 27%</div>
+      <ion-item color="none" id="home-list-item9" *ngFor="let item of avaliacoesAbertas" >
+          <div>Id: {{item.codigo}}</div>
+          <div>Periodo: {{item.dataInicio}} a {{item.dataTermino}}</div>
+          <div></div>
       </ion-item>
-      <ion-item color="none" id="home-list-item10">
-        Item 2
-      </ion-item>
-      <ion-item color="none" id="home-list-item11">
-        Item 3
-      </ion-item>
+     
     </ion-list>
   </ion-list>
   <div class="spacer" style="height:70px;" id="home-spacer1"></div>
   <ion-list id="home-list8">
     <ion-item-divider color="light" id="home-list-item-divider3" style="text-align: right">
-      <ion-icon item-start>3</ion-icon>
-      <h1>Avaliaçõe Agendadas</h1>
+      <ion-icon item-start>{{qtdAvSchedule}}</ion-icon>
+      <h1>Avaliações Agendadas</h1>
 
     </ion-item-divider>
     <ion-list id="home-list7" >
-      <ion-item color="none" id="home-list-item12" on-click="warnUser()">
-        <div>Tecnologo TCE</div>
-        <div>01/01/2018 a 01/01/2018</div>
-        <div>Concluido 27%</div>
-      </ion-item>
-      <ion-item color="none" id="home-list-item13">
-        Item 2
-      </ion-item>
-      <ion-item color="none" id="home-list-item14">
-        Item 3
+      <ion-item color="none" id="home-list-item10" *ngFor="let item of avaliacoesAgendadas" >
+        <div>Id: {{item.codigo}}</div>
+        <div>Periodo: {{item.dataInicio}} a {{item.dataTermino}}</div>
+        <div></div>
       </ion-item>
     </ion-list>
   </ion-list>
@@ -47,19 +36,19 @@
   <div style="position: fixed; bottom: 0;   left:7px; width: 100% ; background-color: rgb(229, 235, 235)"    >      
       <hr style="border-width: 2px; left: 0; width: 100% "  />
   
-      <button id="home-button2" ion-button color="stable" round style="width: 17%">
+      <button id="home-button"     ion-button color="stable" round style="width: 17%">
         <ion-icon name="home"></ion-icon>
       </button>
-      <button id="home-button3" ion-button color="stable" round style="width: 17%">
+      <button id="schedule-button" ion-button color="stable" round style="width: 17%"  (click)="goTo('SchedulePage')">
         <ion-icon name="time"></ion-icon>
       </button>
-      <button id="home-button4" ion-button color="stable" round style="width: 17%">
+      <button id="open-button"     ion-button color="stable" round style="width: 17%" >
         <ion-icon name="play"></ion-icon>
       </button>
-      <button id="home-button5" ion-button color="stable" round style="width: 17%" on-click="warnUser()">
+      <button id="ended-button"    ion-button color="stable" round style="width: 17%" on-click="warnUser()">
         <ion-icon name="calendar"></ion-icon>
       </button>
-      <button id="home-button6" ion-button color="stable" round style="width: 17%" on-click="goToHome()">
+      <button id="user-button"     ion-button color="stable" round style="width: 17%" on-click="goToHome()">
         <ion-icon name="person"></ion-icon>
       </button>
     </div>

@@ -10,6 +10,9 @@ export class AvalicaoService{
 
     }
     findOpened() : Observable <AvaliacaoDTO[]>{
-        return this.http.get  <AvaliacaoDTO[]>(`${API_CONFIG.baseUrl}/avalicoesabertas`);
+        return this.http.get  <AvaliacaoDTO[]>(`${API_CONFIG.baseUrl}/avaliacao`);
+    }
+    findscheduled() : Observable <AvaliacaoDTO[]>{
+        return this.http.get  <AvaliacaoDTO[]>(`${API_CONFIG.baseUrl}/avalicoesagendadas`);
     }
 }

@@ -6,7 +6,8 @@ import { AlertController } from 'ionic-angular';
 @IonicPage()
 @Component({
   selector: 'page-menu',
-  templateUrl: 'menu.html'
+  templateUrl: 'menu.html',
+  
 })
 
 export class MenuPage {

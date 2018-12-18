@@ -4,7 +4,7 @@
       <ion-icon item-start>{{qtdAvOpned}}</ion-icon>
       <h1>Avaliações Abertas</h1>
     </ion-item-divider>
-    <ion-list id="home-list6">
+    <ion-list id="listOpned">
       <ion-item color="none" id="home-list-item9" *ngFor="let item of avaliacoesAbertas" >
           <div>Id: {{item.codigo}}</div>
           <div>Periodo: {{item.dataInicio}} a {{item.dataTermino}}</div>
@@ -21,9 +21,9 @@
 
     </ion-item-divider>
     <ion-list id="home-list7" >
-      <ion-item color="none" id="home-list-item10" *ngFor="let item of avaliacoesAgendadas" >
-        <div>Id: {{item.codigo}}</div>
-        <div>Periodo: {{item.dataInicio}} a {{item.dataTermino}}</div>
+      <ion-item color="none" id="home-list-item10" *ngFor="let item2 of avaliacoesAgendadas" >
+        <div>Id: {{item2.codigo}}</div>
+        <div>Periodo: {{item2.dataInicio}} a {{item2.dataTermino}}</div>
         <div></div>
       </ion-item>
     </ion-list>
@@ -31,24 +31,25 @@
 
   
   <!--Trying use with an anoter component, a external component. 
+        <div style="position: fixed; bottom: 0;   left:7px; width: 100% ; background-color: rgb(229, 235, 235)"    >      
+
   -->
-  
-  <div style="position: fixed; bottom: 0;   left:7px; width: 100% ; background-color: rgb(229, 235, 235)"    >      
+    <div style="position: fixed; bottom: 0;   left:7px; width: 100% ; background-color: rgb(229, 235, 235)"    >      
       <hr style="border-width: 2px; left: 0; width: 100% "  />
   
-      <button id="home-button"     ion-button color="stable" round style="width: 17%">
+      <button id="home-button"     ion-button color={{buttonColor()}} round style="width: 17%">
         <ion-icon name="home"></ion-icon>
       </button>
-      <button id="schedule-button" ion-button color="stable" round style="width: 17%"  (click)="goTo('SchedulePage')">
+      <button id="schedule-button" ion-button color={{buttonColor()}} round style="width: 17%"  (click)="goTo('SchedulePage')">
         <ion-icon name="time"></ion-icon>
       </button>
-      <button id="open-button"     ion-button color="stable" round style="width: 17%" >
+      <button id="open-button"     ion-button color={{buttonColor()}} round style="width: 17%"  (click)="goTo('OpnedPage')">
         <ion-icon name="play"></ion-icon>
       </button>
-      <button id="ended-button"    ion-button color="stable" round style="width: 17%" on-click="warnUser()">
+      <button id="ended-button"    ion-button color={{buttonColor()}} round style="width: 17%" on-click="warnUser()">
         <ion-icon name="calendar"></ion-icon>
       </button>
-      <button id="user-button"     ion-button color="stable" round style="width: 17%" on-click="goToHome()">
+      <button id="user-button"     ion-button color={{buttonColor()}} round style="width: 17%" on-click="goTo('UserPage')">
         <ion-icon name="person"></ion-icon>
       </button>
     </div>

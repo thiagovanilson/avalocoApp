@@ -12,6 +12,7 @@ import {HttpClientModule} from '@angular/common/http'
 
 import { StatusBar }    from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { UserService  } from '../domain/user.service';
 
 //Ever page will need to be declarated here. by Vanilson
 @NgModule({
@@ -37,6 +38,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StatusBar,
     SplashScreen,
     AvalicaoService,
+    UserService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

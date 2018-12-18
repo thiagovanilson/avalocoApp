@@ -1,0 +1,68 @@
+<!--
+  Generated template for the UserPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+  Informations used here https://ionicframework.com/docs/theming/css-utilities/
+-->
+<ion-header>
+
+ 
+</ion-header>
+
+<body>
+  <div style="display:block;width: 50px;margin-left:auto;margin-right:0px;">
+    <button ion-button style=" display:block; top: 200; right: 50;" (click)="goToHome()">
+      <ion-icon name="exit"></ion-icon>
+    </button>
+  </div>
+  <ion-content padding>
+    <img src="assets/imgs/persona.png" style="display:block;width:30%;margin-left:auto;margin-right:auto;">
+    <br />
+    <div text-center ><h2>{{getUser()}}</h2></div>
+
+    <hr style="border-width: 2px;">
+
+    
+    
+    <div style="padding-left: 15%; padding-right: 15%; ">
+      <h3 text-center>Alterar senha</h3>
+      <br />
+
+      <ion-item >
+        <ion-label floating >Senha atual</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>   
+      <ion-item >
+        <ion-label floating >Senha</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating >Confirmar a nova senha</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+
+      <br />
+      <h3 text-center>Alterar E-mail</h3>
+      <br />
+
+      <ion-item >
+        <ion-label floating >E-mail</ion-label>
+        <ion-input type="email" ></ion-input>
+      </ion-item>
+      
+      <br />
+      <ion-grid >
+        <ion-row >
+            <ion-col ></ion-col>
+            <ion-col >
+              <button  ion-button >Salvar</button>              
+            </ion-col>
+            <ion-col ></ion-col>
+
+          </ion-row>
+        </ion-grid>
+        
+    </div>
+  </ion-content>
+</body>

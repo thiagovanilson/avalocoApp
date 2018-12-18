@@ -13,6 +13,6 @@ export class AvalicaoService{
         return this.http.get  <AvaliacaoDTO[]>(`${API_CONFIG.baseUrl}/avaliacao`);
     }
     findscheduled() : Observable <AvaliacaoDTO[]>{
-        return this.http.get  <AvaliacaoDTO[]>(`${API_CONFIG.baseUrl}/avalicoesagendadas`);
+        return this.http.get  <AvaliacaoDTO[]>(`${API_CONFIG.baseUrl}/avaliacao`);
     }
 }

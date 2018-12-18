@@ -1,3 +1,4 @@
+import { API_CONFIG } from './../../config/api.config';
 import { AvaliacaoDTO    } from './../../model/avaliacao.dto';
 import { AvalicaoService } from './../../domain/avaliacao.service';
 import { Component       } from '@angular/core';
@@ -30,7 +31,7 @@ export class HomePage {
   }
   
   public get avaliacoesAgendadas(): AvaliacaoDTO[] {
-    return this._avaliacoesAbertas;
+    return this._avaliacoesAgendadas;
   }
 
   //Only for count the numbers of tests on open status
@@ -46,24 +47,34 @@ export class HomePage {
       return 0;
     return this._avaliacoesAgendadas.length;
   }
-  public set avaliacoesAbertas(value: AvaliacaoDTO[]) {
-    this.avaliacoesAbertas = value;
-  }
+  
   ionViewDidLoad(){  
  
     this.avaliacaoService.findOpened().subscribe(
       response => {this._avaliacoesAbertas = response}
-      );
+    );
+    this.avaliacaoService.findscheduled().subscribe(
+      response => {this._avaliacoesAgendadas = response}
+    );
   }
   public goTo (addres){
     this.navCtrl.push(addres)
+  }//*/
+
+  public buttonColor(){
+    return API_CONFIG.buttonColor;
   }
   warnUser(params) {
     //this.navCtrl.push('MenuPage')
     this.avaliacaoService.findOpened().subscribe(
       response => {console.log(response)}
-      );
-     
+    );
+    this.avaliacaoService.findOpened().subscribe(
+      response => {this._avaliacoesAbertas = response}
+    );
+    this.avaliacaoService.findscheduled().subscribe(
+      response => {this._avaliacoesAgendadas = response}
+    );
     const alert = this.alertCtrl.create({
       title: 'Titulo',
       subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the EvaluationMenuPage page.
@@ -14,10 +14,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'evaluation-menu.html',
 })
 export class EvaluationMenuPage {
+  
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams, 
+    public alertCtrl: AlertController) {
   }
+  ShowText (text: string){
+    const alert = this.alertCtrl.create({
+      title: 'Fase de produção',
+      subTitle: text,
+      buttons: ['Entendi :)']
+    });
+    alert.present();
 
+  }
   ionViewDidLoad() {
     //console.log('ionViewDidLoad EvaluationMenuPage');
   }

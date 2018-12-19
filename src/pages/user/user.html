@@ -12,7 +12,7 @@
 
 <body>
   <div style="display:block;width: 50px;margin-left:auto;margin-right:0px;">
-    <button ion-button style=" display:block; top: 200; right: 50;" (click)="goToHome()">
+    <button ion-button style=" display:block; top: 200; right: 50;" (click)="logout()">
       <ion-icon name="exit"></ion-icon>
     </button>
   </div>
@@ -54,15 +54,17 @@
       <br />
       <ion-grid >
         <ion-row >
-            <ion-col ></ion-col>
-            <ion-col >
-              <button  ion-button >Salvar</button>              
-            </ion-col>
-            <ion-col ></ion-col>
+          <ion-col ></ion-col>
+          <ion-col >
+            <button  ion-button (click)="goToHome()" >Salvar</button>              
+          </ion-col>
+          <ion-col ></ion-col>
 
-          </ion-row>
-        </ion-grid>
+        </ion-row>
+      </ion-grid>
         
     </div>
+    <br />
+    <br />
   </ion-content>
 </body>

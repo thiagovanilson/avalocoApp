@@ -5,7 +5,7 @@ import { UserPage        } from './user';
 
 @NgModule({
   declarations: [
-    UserPage,  
+    UserPage, 
   ],
   imports: [
     IonicPageModule.forChild(UserPage),

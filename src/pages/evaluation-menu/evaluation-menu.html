@@ -12,8 +12,74 @@
 
 
 <body>
-  <ion-content padding>
-    <ion-card>asd</ion-card>
+  <ion-content>
+    
+    
+    <ion-grid style="padding-top:20%; padding-bottom: 20%" text-center>
+      <ion-row >
+        <ion-col >
+          <ion-card style="padding:30px; background-color: rgb(222, 222, 231)" (click)="ShowText('Ações do curso ainda a implementar')" >
+            Checklist das ações do curso
+            <h1>
+              <ion-icon name="md-checkmark"></ion-icon>
+            </h1>
+          </ion-card>
+        </ion-col>
+        <ion-col >
+          <ion-card style="padding:30px; background-color: rgb(222, 222, 231)" (click)="ShowText('Indicadores ainda a implementar')">
+            Indicadores
+            <br />
+            <br />
+            <br />
+            <h1>
+              <ion-icon name="ios-paper"></ion-icon>
+            </h1>
+          </ion-card>              
+        </ion-col>
 
+      </ion-row>
+      <ion-row >
+          <ion-col >
+            <ion-card style="padding:30px; background-color: rgb(222, 222, 231)">
+              Requisitos legais e normativos
+              <h1>
+                <ion-icon name="ios-paper"></ion-icon>
+              </h1>
+            </ion-card>
+          </ion-col>
+          <ion-col >
+              <ion-card style="padding:30px; background-color: rgb(222, 222, 231)">
+                Registrar considerações finais
+                <h1>
+                  <ion-icon name="ios-book"></ion-icon>
+                </h1>
+              </ion-card>              
+          </ion-col>
+  
+        </ion-row>
+    </ion-grid>
+    
+    
+    <!-- 
+    <div style="position: fixed; bottom: 0;   left:7px; width: 100% ; background-color: rgb(229, 235, 235)"    >      
+        <hr style="border-width: 2px; left: 0; width: 100% "  />
+    
+        <button id="home-button"     ion-button  round style="width: 17%;">
+          <ion-icon name="home"></ion-icon>
+        </button>
+        <button id="schedule-button" ion-button  round style="width: 17%">
+          <ion-icon name="time"></ion-icon>
+        </button>
+        <button id="open-button"     ion-button  round style="width: 17%"  >
+          <ion-icon name="play"></ion-icon>
+        </button>
+        <button id="ended-button"    ion-button  round style="width: 17%">
+          <ion-icon name="calendar"></ion-icon>
+        </button>
+        <button id="user-button"     ion-button  round style="width: 17%">
+          <ion-icon name="person"></ion-icon>
+        </button>
+      </div>
+    -->
   </ion-content>
 </body>

@@ -1,7 +1,8 @@
 import { UserService } from './../../domain/user.service';
 import { Component   } from '@angular/core';
 import { HomePage    } from '../home/home';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { LoginPage } from '../login/login';
 
 /**
  * Generated class for the UserPage page.
@@ -17,13 +18,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class UserPage {
 
-  constructor(public us: UserService, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public alertCtrl: AlertController, public us: UserService, public navCtrl: NavController, public navParams: NavParams) {
   }
   getUser(){
     
     return "Vanilson";
   }
+  
+
+  public logout(){
+    this.navCtrl.push(LoginPage);
+  }
   public goToHome (){
+    const alert = this.alertCtrl.create({
+      title: 'Salvo com sucesso!',
+      subTitle: 'Todas as alterações foram salvas',
+      buttons: ['Ok']
+    });
+    alert.present();
     this.navCtrl.push(HomePage)
   }
   ionViewDidLoad() {

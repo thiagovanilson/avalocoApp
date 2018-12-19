@@ -20,7 +20,7 @@ import { UserService  } from '../domain/user.service';
     MyApp,
     LoginPage,
     HomePage,
-    MenuPage
+    MenuPage,
   ],
   imports: [
     BrowserModule,

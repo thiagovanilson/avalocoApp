@@ -1,4 +1,4 @@
-import { API_CONFIG } from './../../config/api.config';
+import { API_CONFIG      } from './../../config/api.config';
 import { AvaliacaoDTO    } from './../../model/avaliacao.dto';
 import { AvalicaoService } from './../../domain/avaliacao.service';
 import { Component       } from '@angular/core';

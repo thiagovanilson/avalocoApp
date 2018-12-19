@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { ChecklistPage } from './../checklist/checklist';
+import { Component     } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 /**
@@ -29,6 +30,9 @@ export class EvaluationMenuPage {
     });
     alert.present();
 
+  }
+  goToChecklist(){
+    this.navCtrl.push(ChecklistPage)
   }
   ionViewDidLoad() {
     //console.log('ionViewDidLoad EvaluationMenuPage');

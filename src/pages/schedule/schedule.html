@@ -16,30 +16,77 @@
 </ion-header>
 
 <ion-content padding>
-    <h4>Avaliações agendadas</h4>
+    
 
-    <ion-card style="height: 80%; width: 100%; margin-left: 0;">
-
-      <ion-card-header >
-      </ion-card-header>    
+    <br />
+    <br />
+        
+    <ion-list id="list-tests" >
+      <!--Change to use ngfor-->
+      <ion-card ion-button clear (click)="goToEvaluation()"
+      style="height: 90px;  width: 100%; margin-left: 0; ">
       
-      <!-- Add card content here! -->
-      <ion-card-content>
+        <ion-card-content style="text-transform: capitalize 	" >
+          <div >Tecnologo ADS </div>
+          <div>10/10/18 a 10/10/18</div> 
+          <div>Vanilson </div>
+          <div>20%</div> 
+        </ion-card-content>
         
-        <ion-list id="list-tests" >
-          <!--Change to use ngfor-->
-          <ion-card ion-button clear (click)="goToEvaluation()"
-          style="height: 90px;  width: 100%; margin-left: 0; ">
-            
-            <ion-card-content >
-              <div>Id: </div>
-              <div>Data inicio: </div> 
-              <div>I2: </div>
-              <div>Data inicio2: </div> 
-            </ion-card-content>
-          </ion-card>
-        </ion-list>
+      </ion-card>
+
+      <ion-card ion-button clear (click)="goToEvaluation()"
+      style="height: 90px;  width: 100%; margin-left: 0; ">
+      
+        <ion-card-content style="text-transform: capitalize 	" >
+          <div >Tecnologo ADS </div>
+          <div>10/10/18 a 10/10/18</div> 
+          <div>Vanilson </div>
+          <div>20%</div> 
+        </ion-card-content>
         
-      </ion-card-content>
-    </ion-card>
+      </ion-card>
+
+      <ion-card ion-button clear (click)="goToEvaluation()"
+      style="height: 90px;  width: 100%; margin-left: 0; ">
+      
+        <ion-card-content style="text-transform: capitalize 	" >
+          <div >Tecnologo ADS </div>
+          <div>10/10/18 a 10/10/18</div> 
+          <div>Vanilson </div>
+          <div>20%</div> 
+        </ion-card-content>
+        
+      </ion-card>
+
+      <ion-card ion-button clear (click)="goToEvaluation()"
+      style="height: 90px;  width: 100%; margin-left: 0; ">
+      
+        <ion-card-content style="text-transform: capitalize 	" >
+          <div >Tecnologo ADS </div>
+          <div>10/10/18 a 10/10/18</div> 
+          <div>Vanilson </div>
+          <div>20%</div> 
+        </ion-card-content>
+        
+      </ion-card>
+      <ion-card ion-button clear (click)="goToEvaluation()"
+      style="height: 90px;  width: 100%; margin-left: 0; ">
+      
+        <ion-card-content style="text-transform: capitalize 	" >
+          <div >Tecnologo ADS </div>
+          <div>10/10/18 a 10/10/18</div> 
+          <div>Vanilson </div>
+          <div>20%</div> 
+        </ion-card-content>
+        
+      </ion-card>
+    </ion-list>
+        
+        
+    <div style="position: fixed; top: 0px; width: 100%; background-color: white "   >      
+      <p></p>
+      <h5>Avaliações agendadas</h5>
+      <hr />
+    </div>
 </ion-content>

@@ -32,7 +32,7 @@ import { UserService  } from '../domain/user.service';
     MyApp,
     LoginPage,
     HomePage,
-    MenuPage
+    MenuPage,
   ],
   providers: [
     StatusBar,

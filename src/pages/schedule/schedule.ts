@@ -15,7 +15,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'schedule.html',
 })
 export class SchedulePage {
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor( public navCtrl: NavController, public navParams: NavParams) {
   }
   public goToEvaluation(){
     this.navCtrl.push('EvaluationMenuPage');
@@ -23,5 +23,4 @@ export class SchedulePage {
   ionViewDidLoad() {
     //console.log('ionViewDidLoad SchedulePage');
   }
-
 }

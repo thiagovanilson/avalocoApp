@@ -1,18 +1,19 @@
+<div style="position: fixed; bottom: 0;   left:7px; width: 100% ; background-color: rgb(229, 235, 235)"    >      
+    <hr style="border-width: 2px; left: 0; width: 100% "  />
 
-<div id= "menu" style="position: fixed; bottom: 0;   left:7px; width: 100% ; background-color: rgb(229, 235, 235)"    >      
-    <button id="home-button2" ion-button color="stable" round style="width: 17%">
+    <button id="home-button"     ion-button color={{buttonColor()}} round style="width: 18%;"  (click)="goTo('HomePage')">
         <ion-icon name="home"></ion-icon>
     </button>
-    <button id="home-button3" ion-button color="stable" round style="width: 17%">
+    <button id="schedule-button" ion-button color={{buttonColor()}} round style="width: 18%;"  (click)="goTo('SchedulePage')">
         <ion-icon name="time"></ion-icon>
     </button>
-    <button id="home-button4" ion-button color="stable" round style="width: 17%">
+    <button id="open-button"     ion-button color={{buttonColor()}} round style="width: 18%"  (click)="goTo('OpnedPage')">
         <ion-icon name="play"></ion-icon>
     </button>
-    <button id="home-button5" ion-button color="stable" round style="width: 17%">
+    <button id="ended-button"    ion-button color={{buttonColor()}} round style="width: 18%" on-click="warnUser()">
         <ion-icon name="calendar"></ion-icon>
     </button>
-    <button id="home-button6" ion-button color="stable" round style="width: 17%" >
+    <button id="user-button"     ion-button color={{buttonColor()}} round style="width: 18%" on-click="goTo('UserPage')">
         <ion-icon name="person"></ion-icon>
     </button>
 </div>

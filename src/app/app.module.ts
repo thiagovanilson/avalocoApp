@@ -1,3 +1,5 @@
+import { MenuPage } from './../pages/menu/menu';
+import { ChecklistPage } from './../pages/checklist/checklist';
 import { AvalicaoService } from './../domain/avaliacao.service';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -5,7 +7,6 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp }     from './app.component';
 import { LoginPage } from '../pages/login/login';
 import { HomePage }  from '../pages/home/home';
-import { MenuPage }  from '../pages/menu/menu';
 import {HttpClientModule} from '@angular/common/http'
 
 
@@ -38,9 +39,11 @@ import { UserService  } from '../domain/user.service';
     StatusBar,
     SplashScreen,
     AvalicaoService,
-    UserService,
+    UserService, 
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 
-export class AppModule {}
+export class AppModule {
+  
+}

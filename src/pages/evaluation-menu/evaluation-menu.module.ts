@@ -1,7 +1,8 @@
 import { NgModule           } from '@angular/core';
 import { IonicPageModule    } from 'ionic-angular';
 import { EvaluationMenuPage } from './evaluation-menu';
-import { SchedulePage       } from '../schedule/schedule';
+import { HomePage } from '../home/home';
+import { ChecklistPage } from '../checklist/checklist';
 
 @NgModule({
   declarations: [

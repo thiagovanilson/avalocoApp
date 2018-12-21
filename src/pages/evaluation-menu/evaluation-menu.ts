@@ -32,7 +32,7 @@ export class EvaluationMenuPage {
 
   }
   goToChecklist(){
-    this.navCtrl.push(ChecklistPage)
+    this.navCtrl.push('ChecklistPage');
   }
   ionViewDidLoad() {
     //console.log('ionViewDidLoad EvaluationMenuPage');
